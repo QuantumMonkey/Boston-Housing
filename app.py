@@ -1,4 +1,3 @@
-from crypt import methods
 import pickle
 
 from flask import Flask, request, app, jsonify, url_for, render_template
@@ -11,9 +10,9 @@ app = Flask(__name__)
 regmodel = pickle.load(open('regmodel.pkl', 'rb'))
 scaler = pickle.load(open('scaling.pkl', 'rb'))
 
-@app.route('/', methods=["GET"])
+@app.route('/')
 def home():
-    return "Hello there bitch!" # will redirect ro home page by looking into the templates folder
+    return render_template("home.html") # will redirect ro home page by looking into the templates folder
 
 @app.route('/predict_api', methods=['POST']) # using this as an api itself, will be using with postman.
 def predict_api():

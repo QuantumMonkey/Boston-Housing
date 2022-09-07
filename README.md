@@ -32,3 +32,7 @@ git status
 git add .
 ```
 [Git Shortcuts](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
+```
+flask run
+```
