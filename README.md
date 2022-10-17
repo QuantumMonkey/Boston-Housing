@@ -36,3 +36,5 @@ git add .
 ```
 flask run
 ```
+
+This project aims at deploying an end to end solution for the boston housing dataset. 
